@@ -4,7 +4,7 @@ RUN apk update && \
     apk add git python make g++ && \
     apk add --no-cache curl && \
     curl -o- -L https://yarnpkg.com/install.sh | sh && \
-    yarn global add create-react-app
+    yarn add create-react-app redux react-redux
 
 ENV TZ Asia/Tokyo
 ENV PATH $HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH
