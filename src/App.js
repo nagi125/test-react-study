@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // クラスコンポーネント
 // class App extends Component {
@@ -16,15 +16,14 @@ import React, { Component } from 'react';
 const App = () => {
   return (
       <div>
-        < Cat/>
-        < Cat/>
-        < Cat/>
+        <User name={"Taro"} />
       </div>
   )
 }
 
-const Cat = () => {
-  return <div>Meow!</div>
+const User = (props) => {
+
+  return <div>Hi, I am {props.name}</div>
 }
 
 export default App;
