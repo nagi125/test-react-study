@@ -12,15 +12,23 @@ class Counter extends Component {
     this.state = { count: 0}
   }
 
+  handlePlusButton = () => {
+    // setState使うとRenderがcallbackで実行される
+    this.setState({ count: this.state.count + 1})
+  }
+
+  handleMinusButton = () => {
+    this.setState({ count: this.state.count - 1})
+  }
+
   render() {
     return (
         <React.Fragment>
           <div>counter: {this.state.count}</div>
-          <button>+1</button>
-          <button>-1</button>
+          <button onClick={this.handlePlusButton}>+1</button>
+          <button onClick={this.handleMinusButton}>-1</button>
         </React.Fragment>
     )
-
   }
 }
 
