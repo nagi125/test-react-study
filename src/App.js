@@ -14,16 +14,26 @@ import React from 'react';
 
 // 関数コンポーネント
 const App = () => {
+
+  const profiles = [
+    { name: "Taro", age: 10 },
+    { name: "Hanako", age: 5 }
+  ]
+
   return (
       <div>
-        <User name={"Taro"} />
+        {
+          profiles.map((profile) => {
+            return <User name={profile.name} age={profile.age} />
+          })
+        }
       </div>
   )
 }
 
 const User = (props) => {
 
-  return <div>Hi, I am {props.name}</div>
+  return <div>Hi, I am {props.name}, and {props.age} years old!</div>
 }
 
 export default App;
