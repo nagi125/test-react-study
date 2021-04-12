@@ -1,3 +1,4 @@
+// 状態の変更を担う
 import { INCREMENT, DECREMENT } from "../actions"
 
 const initialState = { value: 0 }
